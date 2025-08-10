@@ -1,4 +1,4 @@
-# Telecom X – Churn Prediction Pipeline
+# Telecom X Parte 2 – Churn Prediction Pipeline
 
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)  
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.0%2B-orange)](https://scikit-learn.org/)  
@@ -37,19 +37,33 @@ Este repositorio contiene:
 ## Estructura del Repositorio
 
 ├── data/
+
 │ └── df_estandarizado.csv
+
 │ └── README.md
+
 ├── notebooks/
+
 │ └── 01_EDA.ipynb
+
 │ └── 02_Preprocessing.ipynb
+
 │ └── 03_Modeling.ipynb
+
 ├── src/
+
 │ ├── preprocessing.py
+
 │ ├── modeling.py
+
 │ └── utils.py
+
 ├── models/
+
 │ └── telecomx_churn_pipeline_<timestamp>.joblib
+
 ├── requirements.txt
+
 └── README.md
 
 
@@ -97,3 +111,4 @@ Este repositorio contiene:
        ("num", StandardScaler(), selected_numeric),
        ("cat", OrdinalEncoder(),   selected_categorical)
    ], remainder="drop")
+
