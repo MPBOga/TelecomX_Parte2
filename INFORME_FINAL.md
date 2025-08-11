@@ -34,33 +34,26 @@ Analizando las importancias de variables, los principales drivers de churn fuero
 ## 3. Recomendaciones Estratégicas
 Para mitigar el churn y mejorar la retención, sugerimos:
 
-Promocionar contratos anuales
+1. Promocionar contratos anuales
+* Ofrecer descuentos en tarifas mensuales para planes de 12 o 24 meses.
 
-Ofrecer descuentos en tarifas mensuales para planes de 12 o 24 meses.
+2. Paquetes de soporte y seguridad online
+* Incluir TechSupport y OnlineSecurity en ofertas de bienvenida para clientes nuevos.
 
-Paquetes de soporte y seguridad online
+3. Alertas tempranas
+* Implementar sistema de notificaciones para clientes con tenure < 6 meses y cargos mensuales por encima del promedio.
 
-Incluir TechSupport y OnlineSecurity en ofertas de bienvenida para clientes nuevos.
+4. Incentivos para pago automático
+* Dar beneficios (descuento, puntos de fidelidad) a clientes que usen débito automático o tarjeta de crédito.
 
-Alertas tempranas
+---
+## 4. Impacto Esperado
+* Reducción de churn en un 15–20 % en el segmento de tenure corto.
+* Aumento de adopción de contratos anuales en 10–12 %, estabilizando los ingresos recurrentes.
+* Mejora en la satisfacción de clientes al contar con soporte técnico y seguridad integrada.
 
-Implementar sistema de notificaciones para clientes con tenure < 6 meses y cargos mensuales por encima del promedio.
-
-Incentivos para pago automático
-
-Dar beneficios (descuento, puntos de fidelidad) a clientes que usen débito automático o tarjeta de crédito.
-
-4. Impacto Esperado
-Reducción de churn en un 15–20 % en el segmento de tenure corto.
-
-Aumento de adopción de contratos anuales en 10–12 %, estabilizando los ingresos recurrentes.
-
-Mejora en la satisfacción de clientes al contar con soporte técnico y seguridad integrada.
-
-5. Próximos Pasos
-Despliegue del pipeline en producción con monitoreo de drift.
-
-Experimentar con modelos de interpretación avanzados (SHAP) para segmentar campañas personalizadas.
-
-Evaluar impacto de las iniciativas piloto y refinar estrategias según resultados operativos.
-
+---
+## 5. Próximos Pasos
+* Despliegue del pipeline en producción con monitoreo de drift.
+* Experimentar con modelos de interpretación avanzados (SHAP) para segmentar campañas personalizadas.
+* Evaluar impacto de las iniciativas piloto y refinar estrategias según resultados operativos.
