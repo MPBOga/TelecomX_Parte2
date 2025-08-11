@@ -112,3 +112,51 @@ Este repositorio contiene:
        ("cat", OrdinalEncoder(),   selected_categorical)
    ], remainder="drop")
 
+## Selección de Variables
+
+Se calcularon las importancias finales con rf_best.feature_importances_.
+
+Top 5 variables:
+
+
+Feature	Importance
+account.Contract	      0.1491
+customer.tenure	        0.1383
+account.Charges.Total	  0.1372
+account.Charges.Monthly	0.1275
+Cuentas_Diarias	        0.1267
+
+Se mantuvieron las 16 variables con mayor aporte acumulado.
+
+## Modelado
+
+### Modelos entrenados
+* LogisticRegression
+* RandomForestClassifier
+* XGBClassifier (opcional)
+
+### Búsqueda de Hiperparámetros
+
+Se usó GridSearchCV sobre 24 combinaciones y 5-fold CV:
+
+Mejores parámetros:
+{
+  "n_estimators": 200,
+  "max_depth": 20,
+  "min_samples_leaf": 1,
+  "class_weight": None
+}
+Mejor F1 (CV): 0.8377
+
+## Interpretación del Modelo
+* Gráfico de feature_importances_ para las top 20 variables.
+* Umbral óptimo (Youden’s J) de la curva ROC (AUC ≈ 0.88).
+* Métricas en test: precision, recall y F1 para cada clase.
+
+## Serialización del Pipeline
+import joblib
+from datetime import datetime
+
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+joblib.dump(pipeline, f"models/telecomx_churn_pipeline.joblib")
+
