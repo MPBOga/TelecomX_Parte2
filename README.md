@@ -160,5 +160,17 @@ Mejor F1 (CV): 0.8377
   
   timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
   joblib.dump(pipeline, f"models/telecomx_churn_pipeline.joblib")
+```
+---
 
 ## Genera un único artefacto que incluye preprocesamiento y modelo.
+
+## Reproducción del Experimento
+1. **Clona el repositorio.**
+2. **Crea y activa tu entorno:**
+
+```python
+  python3 -m venv venv
+  source venv/bin/activate
+  pip install -r requirements.txt
+```
