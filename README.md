@@ -154,9 +154,11 @@ Mejor F1 (CV): 0.8377
 * Métricas en test: precision, recall y F1 para cada clase.
 
 ## Serialización del Pipeline
-import joblib
-from datetime import datetime
+  ```python
+  import joblib
+  from datetime import datetime
+  
+  timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+  joblib.dump(pipeline, f"models/telecomx_churn_pipeline.joblib")
 
-timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-joblib.dump(pipeline, f"models/telecomx_churn_pipeline.joblib")
-
+## Genera un único artefacto que incluye preprocesamiento y modelo.
