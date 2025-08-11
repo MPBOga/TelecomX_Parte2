@@ -174,3 +174,56 @@ Mejor F1 (CV): 0.8377
   source venv/bin/activate
   pip install -r requirements.txt
 ```
+
+## Mapeo de Variables Categóricas
+Variable	                Mapping (texto → código)
+account.Contract	        {"Month-to-month":0, "One year":1, "Two year":2}
+internet.TechSupport	    {"No":0, "No internet service":1, "Yes":2}
+internet.OnlineSecurity	  {"No":0, "No internet service":1, "Yes":2}
+account.PaymentMethod	    {"Bank transfer (automatic)":0, "Credit card (automatic)":1,
+                            "Electronic check":2, "Mailed check":3}
+internet.OnlineBackup	    {"No":0, "No internet service":1, "Yes":2}
+internet.InternetService	{"DSL":0, "Fiber optic":1, "No":2}
+customer.Partner	        {"No":0, "Yes":1}
+customer.Dependents	      {"No":0, "Yes":1}
+account.PaperlessBilling	{"No":0, "Yes":1}
+internet.DeviceProtection	{"No":0, "No internet service":1, "Yes":2}
+internet.StreamingMovies	{"No":0, "No internet service":1, "Yes":2}
+customer.SeniorCitizen	  {"No":0, "Yes":1}
+
+## Formato de Entrada
+El DataFrame de entrada debe incluir estas 16 columnas:
+1. customer.tenure (int)
+2. account.Charges.Monthly (float)
+3. account.Charges.Total (float)
+4. Cuentas_Diarias (float)
+5. 12 variables categóricas (texto conforme al mapping anterior)
+
+```python
+  import pandas as pd
+  
+  new_data = pd.DataFrame([{
+      "customer.tenure": 12,
+      "account.Charges.Monthly": 89.65,
+      "account.Charges.Total": 1075.80,
+      "Cuentas_Diarias": 89.65 / 12,
+      "account.Contract": "Two year",
+      "internet.TechSupport": "Yes",
+      "internet.OnlineSecurity": "No internet service",
+      "account.PaymentMethod": "Credit card (automatic)",
+      "internet.OnlineBackup": "Yes",
+      "internet.InternetService": "Fiber optic",
+      "customer.Partner": "No",
+      "customer.Dependents": "Yes",
+      "account.PaperlessBilling": "Yes",
+      "internet.DeviceProtection": "No internet service",
+      "internet.StreamingMovies": "Yes",
+      "customer.SeniorCitizen": "No"
+  }])
+```
+## Buenas Prácticas
+* Asegura que no entren datos con categorías desconocidas.
+* Valida y limpia las entradas antes de la codificación.
+* Documenta en tu API las opciones válidas para cada variable categórica.
+* Versiona el pipeline con timestamp en el nombre del artefacto.
+* Monitorea en producción métricas de rendimiento y drift.
