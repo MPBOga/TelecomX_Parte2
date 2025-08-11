@@ -177,20 +177,33 @@ Mejor F1 (CV): 0.8377
 
 ## Mapeo de Variables Categóricas
 Variable	                Mapping (texto → código)
+
 account.Contract	        {"Month-to-month":0, "One year":1, "Two year":2}
+
 internet.TechSupport	    {"No":0, "No internet service":1, "Yes":2}
+
 internet.OnlineSecurity	  {"No":0, "No internet service":1, "Yes":2}
+
 account.PaymentMethod	    {"Bank transfer (automatic)":0, "Credit card (automatic)":1,
                             "Electronic check":2, "Mailed check":3}
+
 internet.OnlineBackup	    {"No":0, "No internet service":1, "Yes":2}
+
 internet.InternetService	{"DSL":0, "Fiber optic":1, "No":2}
+
 customer.Partner	        {"No":0, "Yes":1}
+
 customer.Dependents	      {"No":0, "Yes":1}
+
 account.PaperlessBilling	{"No":0, "Yes":1}
+
 internet.DeviceProtection	{"No":0, "No internet service":1, "Yes":2}
+
 internet.StreamingMovies	{"No":0, "No internet service":1, "Yes":2}
+
 customer.SeniorCitizen	  {"No":0, "Yes":1}
 
+---
 ## Formato de Entrada
 El DataFrame de entrada debe incluir estas 16 columnas:
 1. customer.tenure (int)
