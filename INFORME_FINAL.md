@@ -16,19 +16,19 @@ La solución alcanzó un F1-score de 0.84 y un AUC ROC de aproximadamente 0.88 e
 Analizando las importancias de variables, los principales drivers de churn fueron:
 
 1. Tipo de contrato
-* Contratos mes a mes presentan un riesgo mayor de cancelación comparado con planes anuales.
+  * Contratos mes a mes presentan un riesgo mayor de cancelación comparado con planes anuales.
 
 2. Cargos mensuales elevados
-* Clientes con bills altos tienen más probabilidad de churn.
+  * Clientes con bills altos tienen más probabilidad de churn.
 
 3. Tenure corto
-* Usuarios con menos de 6 meses de relación con la empresa muestran mayor inestabilidad.
+  * Usuarios con menos de 6 meses de relación con la empresa muestran mayor inestabilidad.
 
 4. Ausencia de servicios de soporte técnico y seguridad en línea
-* Falta de planes de TechSupport y OnlineSecurity se asocia a mayor churn.
+  * Falta de planes de TechSupport y OnlineSecurity se asocia a mayor churn.
 
 5. Método de pago
-* Clientes con pagos manuales (e.g., mailed check) cancelan más frecuentemente que quienes usan métodos automáticos.
+  * Clientes con pagos manuales (e.g., mailed check) cancelan más frecuentemente que quienes usan métodos automáticos.
 
 ---
 ## 3. Recomendaciones Estratégicas
@@ -63,3 +63,4 @@ Despliegue del pipeline en producción con monitoreo de drift.
 Experimentar con modelos de interpretación avanzados (SHAP) para segmentar campañas personalizadas.
 
 Evaluar impacto de las iniciativas piloto y refinar estrategias según resultados operativos.
+
