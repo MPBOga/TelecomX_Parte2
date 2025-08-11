@@ -42,25 +42,13 @@ Este repositorio contiene:
 
 │ └── README.md
 
-├── notebooks/
+├── notebook/
 
-│ └── 01_EDA.ipynb
-
-│ └── 02_Preprocessing.ipynb
-
-│ └── 03_Modeling.ipynb
-
-├── src/
-
-│ ├── preprocessing.py
-
-│ ├── modeling.py
-
-│ └── utils.py
+│ └── Telecom_X_Parte_2.ipynb
 
 ├── models/
 
-│ └── telecomx_churn_pipeline_<timestamp>.joblib
+│ └── telecomx_churn_pipeline.joblib
 
 ├── requirements.txt
 
